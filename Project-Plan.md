@@ -22,6 +22,7 @@
 - owner (User) @ManyToOne
 - gifts (List<Regalo>) @OneToMany(mappedBy="wishlist", cascade=CascadeType.ALL, orphanRemoval=true)
 - isPublished (boolean) - indica se la wishlist è stata pubblicata (default: false)
+- savedByUsers (List<User>) @ManyToMany(mappedBy="savedWishlists") // utenti che hanno salvato la wishlist (opzionale, per funzionalità bonus)
 
 ## User
 - username 
@@ -112,7 +113,6 @@ Implementazione base di JWT authentication con access token e refresh token.
         - **DELETE** `/api/wishlists/{wishlistId}/gift/{giftId}` - elimina un regalo dalla wishlist (solo se proprietario e non pubblicata)
         - **POST** `/api/wishlists/{wishlistId}/gift/{giftId}/book` - prenota un regalo della wishlist (se la wishlist è pubblica)
             - JSON richiesta {
-                "guestName": "string" (user se loggato, altrimenti nome del guest)
                 "message": "string" (opzionale)
             }
             - Controlli:
