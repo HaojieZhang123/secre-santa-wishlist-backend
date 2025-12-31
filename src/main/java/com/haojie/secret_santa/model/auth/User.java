@@ -1,9 +1,11 @@
-package com.haojie.secret_santa.model.entity;
+package com.haojie.secret_santa.model.auth;
 
 import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.haojie.secret_santa.model.entity.Gift;
+import com.haojie.secret_santa.model.entity.Wishlist;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

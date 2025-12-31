@@ -2,6 +2,8 @@ package com.haojie.secret_santa.model.entity;
 
 import java.util.List;
 
+import com.haojie.secret_santa.model.auth.User;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

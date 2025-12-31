@@ -1,4 +1,4 @@
-package com.haojie.secret_santa.model.entity;
+package com.haojie.secret_santa.model.auth;
 
 public enum ERole {
     ROLE_USER,
