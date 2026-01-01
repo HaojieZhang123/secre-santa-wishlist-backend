@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -43,11 +44,11 @@ public class Gift {
     private String note;
 
     @ManyToOne
-    // @JoinColumn(name = "wishlist_id")
+    @JoinColumn(name = "wishlist_id")
     private Wishlist wishlist;
 
     @ManyToOne
-    // @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Lob

@@ -108,4 +108,12 @@ public class User {
     public void setBookedGifts(List<Gift> bookedGifts) {
         this.bookedGifts = bookedGifts;
     }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

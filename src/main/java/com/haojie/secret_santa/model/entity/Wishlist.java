@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.haojie.secret_santa.model.auth.User;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,7 +32,7 @@ public class Wishlist {
     @ManyToMany(mappedBy = "savedWishlists")
     private List<User> savedByUsers;
 
-    @OneToMany(mappedBy = "wishlist")
+    @OneToMany(mappedBy = "wishlist", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Gift> gifts;
 
     private boolean isPublic;
