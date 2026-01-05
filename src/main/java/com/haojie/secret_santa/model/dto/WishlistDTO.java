@@ -1,4 +1,4 @@
-package com.haojie.secret_santa.dto;
+package com.haojie.secret_santa.model.dto;
 
 import java.util.List;
 

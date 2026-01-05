@@ -1,33 +1,38 @@
-package com.haojie.secret_santa.dto;
+package com.haojie.secret_santa.model.dto;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-
-public class GiftRequest {
-    @NotBlank
+public class GiftDTO {
+    private Integer id;
     private String name;
-    @NotBlank
     private String imageUrl;
-    @NotBlank
     private String linkUrl;
-    @Min(0)
     private long priceInCents;
-    @Min(1)
-    @Max(5)
     private int priority;
     private String note;
+    private boolean isBooked;
+    private String message;
 
-    public GiftRequest() {
+    public GiftDTO() {
     }
 
-    public GiftRequest(String name, String imageUrl, String linkUrl, long priceInCents, int priority, String note) {
+    public GiftDTO(Integer id, String name, String imageUrl, String linkUrl, long priceInCents, int priority,
+            String note, boolean isBooked, String message) {
+        this.id = id;
         this.name = name;
         this.imageUrl = imageUrl;
         this.linkUrl = linkUrl;
         this.priceInCents = priceInCents;
         this.priority = priority;
         this.note = note;
+        this.isBooked = isBooked;
+        this.message = message;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -76,5 +81,21 @@ public class GiftRequest {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+    public void setBooked(boolean booked) {
+        isBooked = booked;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

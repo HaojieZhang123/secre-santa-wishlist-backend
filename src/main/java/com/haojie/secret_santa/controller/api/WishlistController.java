@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.haojie.secret_santa.dto.BookGiftRequest;
-import com.haojie.secret_santa.dto.GiftDTO;
-import com.haojie.secret_santa.dto.GiftRequest;
-import com.haojie.secret_santa.dto.WishlistDTO;
-import com.haojie.secret_santa.dto.WishlistRequest;
 import com.haojie.secret_santa.model.auth.User;
+import com.haojie.secret_santa.model.dto.BookGiftRequest;
+import com.haojie.secret_santa.model.dto.GiftDTO;
+import com.haojie.secret_santa.model.dto.GiftRequest;
+import com.haojie.secret_santa.model.dto.WishlistDTO;
+import com.haojie.secret_santa.model.dto.WishlistRequest;
 import com.haojie.secret_santa.model.entity.Gift;
 import com.haojie.secret_santa.model.entity.Wishlist;
 import com.haojie.secret_santa.repository.auth.UserRepository;
