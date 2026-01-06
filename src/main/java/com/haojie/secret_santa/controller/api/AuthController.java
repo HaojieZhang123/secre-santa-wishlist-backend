@@ -32,7 +32,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<ApiResponse> register(@Valid @RequestBody RegisterRequest request) {
-        log.info("Register attempt for email: {}", request.getEmail());
+        log.info("Register attempt for username: {}", request.getUsername());
         ApiResponse resp = authService.register(request);
         if (resp.isSuccess()) {
             return ResponseEntity.status(HttpStatus.CREATED).body(resp);

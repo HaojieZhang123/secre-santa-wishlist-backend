@@ -1,15 +1,10 @@
 package com.haojie.secret_santa.model.payload.request;
 
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class RegisterRequest {
-
-    @NotBlank(message = "Email must not be blank")
-    @Email(message = "Email not valid")
-    private String email;
 
     @NotBlank(message = "password must not be blank")
     @Size(min = 6, message = "passowrd must be at least 6 characters")
@@ -22,14 +17,6 @@ public class RegisterRequest {
     private String role;
 
     public RegisterRequest() {
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {
