@@ -42,7 +42,8 @@ public class User {
     @JsonBackReference
     private List<Wishlist> wishlists;
 
-    @ManyToMany(mappedBy = "savedByUsers")
+    @ManyToMany
+    @JoinTable(name = "user_saved_wishlists", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "wishlist_id"))
     private List<Wishlist> savedWishlists;
 
     @OneToMany(mappedBy = "user")

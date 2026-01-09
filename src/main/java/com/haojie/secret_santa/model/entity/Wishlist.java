@@ -20,7 +20,7 @@ import jakarta.validation.constraints.NotBlank;
 public class Wishlist {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotBlank

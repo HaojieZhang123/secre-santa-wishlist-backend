@@ -2,6 +2,7 @@ package com.haojie.secret_santa.security;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -33,7 +34,7 @@ public class SecurityConfiguration {
     private final JwtAuthFilter jwtAuthFilter;
     private final JwtAuthEntryPoint jwtAuthEntryPoint;
 
-    @org.springframework.beans.factory.annotation.Value("${cors.allowed.origins}")
+    @Value("${cors.allowed.origins}")
     private String allowedOrigins;
 
     // constructor to inject JwtAuthFilter and JwtAuthEntryPoint
