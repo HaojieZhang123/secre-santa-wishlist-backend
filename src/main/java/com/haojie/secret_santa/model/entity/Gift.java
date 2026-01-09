@@ -31,11 +31,9 @@ public class Gift {
     @NotBlank
     private String linkUrl;
 
-    @NotBlank
     @Min(0)
     private int priceInCents;
 
-    @NotBlank
     @Min(0)
     @Max(5)
     private int priority;
