@@ -33,7 +33,7 @@ public class Gift {
 
     @NotBlank
     @Min(0)
-    private long priceInCents;
+    private int priceInCents;
 
     @NotBlank
     @Min(0)
@@ -60,7 +60,7 @@ public class Gift {
     public Gift() {
     }
 
-    public Gift(String name, String imageUrl, String linkUrl, long priceInCents, int priority, String note,
+    public Gift(String name, String imageUrl, String linkUrl, int priceInCents, int priority, String note,
             Wishlist wishlist) {
         this.name = name;
         this.imageUrl = imageUrl;
@@ -105,11 +105,11 @@ public class Gift {
         this.linkUrl = linkUrl;
     }
 
-    public long getPriceInCents() {
+    public int getPriceInCents() {
         return priceInCents;
     }
 
-    public void setPriceInCents(long priceInCents) {
+    public void setPriceInCents(int priceInCents) {
         this.priceInCents = priceInCents;
     }
 

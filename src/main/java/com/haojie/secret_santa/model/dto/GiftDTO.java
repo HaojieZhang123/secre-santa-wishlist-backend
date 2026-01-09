@@ -5,7 +5,7 @@ public class GiftDTO {
     private String name;
     private String imageUrl;
     private String linkUrl;
-    private long priceInCents;
+    private int priceInCents;
     private int priority;
     private String note;
     private boolean isBooked;
@@ -14,7 +14,7 @@ public class GiftDTO {
     public GiftDTO() {
     }
 
-    public GiftDTO(Integer id, String name, String imageUrl, String linkUrl, long priceInCents, int priority,
+    public GiftDTO(Integer id, String name, String imageUrl, String linkUrl, int priceInCents, int priority,
             String note, boolean isBooked, String message) {
         this.id = id;
         this.name = name;
@@ -59,11 +59,11 @@ public class GiftDTO {
         this.linkUrl = linkUrl;
     }
 
-    public long getPriceInCents() {
+    public int getPriceInCents() {
         return priceInCents;
     }
 
-    public void setPriceInCents(long priceInCents) {
+    public void setPriceInCents(int priceInCents) {
         this.priceInCents = priceInCents;
     }
 

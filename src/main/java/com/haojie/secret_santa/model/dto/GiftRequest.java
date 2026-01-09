@@ -12,7 +12,7 @@ public class GiftRequest {
     @NotBlank
     private String linkUrl;
     @Min(0)
-    private long priceInCents;
+    private int priceInCents;
     @Min(1)
     @Max(5)
     private int priority;
@@ -21,7 +21,7 @@ public class GiftRequest {
     public GiftRequest() {
     }
 
-    public GiftRequest(String name, String imageUrl, String linkUrl, long priceInCents, int priority, String note) {
+    public GiftRequest(String name, String imageUrl, String linkUrl, int priceInCents, int priority, String note) {
         this.name = name;
         this.imageUrl = imageUrl;
         this.linkUrl = linkUrl;
@@ -54,11 +54,11 @@ public class GiftRequest {
         this.linkUrl = linkUrl;
     }
 
-    public long getPriceInCents() {
+    public int getPriceInCents() {
         return priceInCents;
     }
 
-    public void setPriceInCents(long priceInCents) {
+    public void setPriceInCents(int priceInCents) {
         this.priceInCents = priceInCents;
     }
 
